@@ -1,0 +1,19 @@
+---
+import Card from "./Card.astro";
+
+export interface Props {
+    imageUrl: string;
+    href: string;
+}
+
+const {imageUrl, href} = Astro.props;
+const backgroundImage = `background-image: url(${imageUrl})`;
+---
+
+<a class="block" href={href}>
+    <Card className="h-full min-h-96 !p-0 transition-all duration-100 hover:border-primary bg-top bg-cover overflow-hidden" style={backgroundImage}>
+        <div class="p-4 h-full flex items-end bg-gradient-to-t from-dark/85 to-dark/0">
+            <slot/>
+        </div>
+    </Card>
+</a>
