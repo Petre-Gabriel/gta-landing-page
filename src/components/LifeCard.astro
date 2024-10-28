@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import Card from "./Card.astro";
+
+export interface Props {
+    title: string;
+    description: string;
+    backgroundUrl: string;
+    characterImage: {
+        src: string;
+        width: number;
+        height: number;
+    };
+    characterPosition?: "left" | "right";
+}
+
+const { title, description, backgroundUrl, characterImage, characterPosition = 'left' } = Astro.props;
+---
+
+<Card noBackground className="relative z-0 !p-0 min-h-[512px] overflow-visible group">
+    <Image src={backgroundUrl} alt={title} width={1024} height={1024} class="transition-all duration-200 rounded-md absolute inset-0 -z-20 w-full h-full object-cover grayscale group-hover:grayscale-0" />
+    <Image src={characterImage.src} alt="Caracter" width={characterImage.width} height={characterImage.height} class:list={[characterPosition === 'left' ? "left-2" : "right-2","transition-all duration-500 absolute bottom-0 -z-10 h-[calc(100%+32px)] group-hover:h-[calc(100%+64px)] w-auto"]} />
+
+    <div class="h-full rounded-md flex flex-col justify-end p-4 bg-gradient-to-t from-25% from-dark/85 to-dark/0">
+        <h3 class="h2">{title}</h3>
+        <p>{description}</p>
+    </div>
+</Card>

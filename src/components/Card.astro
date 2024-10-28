@@ -2,11 +2,16 @@
 export interface Props {
 	className?: string;
 	style?: string;
+	noBackground?: boolean;
 }
 
-const {className, style} = Astro.props;
+const {className, style, noBackground = false} = Astro.props;
 ---
 
 <div class:list={["p-4 rounded-md border-2 border-subheading", className]} style={style}>
-	<slot/>
+	{noBackground ? <slot/> : 
+		<div class="rounded-md w-full h-full p-4 flex flex-col gap-2 justify-end bg-gradient-to-t from-25% from-dark/85 to-dark/15">
+			<slot/>
+		</div>
+	}
 </div>
