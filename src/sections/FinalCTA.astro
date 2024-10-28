@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+
+import Container from "../components/Container.astro";
+import Button from "../components/Button.astro";
+---
+
+<section>
+    <Container>
+        <Image src="/assets/incepe-aventura.png" alt="Incepe Aventura" width={1920} height={1200}/>
+
+        <div class="text-center">
+            <h2 class="h1 mb-6">
+                <span class="block mb-2">
+                    Pregatit Sa Dai Start La
+                </span>
+                <span class="block w-fit mx-auto bg-primary px-12 py-6 -skew-x-12">
+                    <span class="block skew-x-12">
+                        Noua Ta Viata?
+                    </span>
+                </span>
+            </h2>
+    
+            <a href="/intra-pe-server">
+                <Button as="span" variant="white" className="mx-auto">Intra pe Server</Button>
+            </a>
+        </div>
+
+    </Container>
+</section>

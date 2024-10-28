@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import Card from "../components/Card.astro";
+import Container from "../components/Container.astro";
+---
+
+<section>
+    <Container>
+        <div class="text-center mb-12">
+            <h2 class="h1">Tu Cine Vrei Sa Fii?</h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-5 pt-24">
+
+            <Card className="relative z-0 !p-0 min-h-[65vh] overflow-visible group">
+                <Image src="/assets/clasa-muncitoare.png" alt="Clasa Muncitoare" width={645} height={555} class="transition-all duration-200 rounded-md absolute inset-0 -z-20 w-full h-full object-cover grayscale group-hover:grayscale-0" />
+                <Image src="/assets/muncitor.png" alt="Muncitor" width={928} height={1232} class="transition-all duration-500 absolute -z-10 left-2 bottom-0 h-[calc(100%+64px)] group-hover:h-[calc(100%+96px)] w-auto -scale-x-100" />
+
+
+                <div class="rounded-md w-full h-full flex flex-col justify-end gap-2 bg-gradient-to-t p-4 from-30% from-dark/85 to-dark/0">
+                    <h3 class="h2">Clasa Muncitoare</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur. Senectus sit duis ac ut aliquet amet ultricies amet.</p>
+                </div>
+            </Card>
+
+            <Card className="relative z-0 !p-0 min-h-[65vh] overflow-visible group">
+                <Image src="/assets/mafia-los-santos.png" alt="Mafia Los Santos" width={645} height={555} class="transition-all duration-200 rounded-md absolute inset-0 -z-20 w-full h-full object-cover grayscale group-hover:grayscale-0" />
+                <Image src="/assets/mafiot.png" alt="Mafiot" width={928} height={1232} class="transition-all duration-500 absolute -z-10 right-2 bottom-0 h-[calc(100%+64px)] group-hover:h-[calc(100%+96px)] w-auto" />
+
+                <div class="rounded-md w-full h-full flex flex-col justify-end gap-2 bg-gradient-to-t p-4 from-30% from-dark/85 to-dark/0">
+
+                    <h3 class="h2">Mafia Los Santos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur. Senectus sit duis ac ut aliquet amet ultricies amet.</p>
+                </div>
+            </Card>
+        </div>
+    </Container>
+</section>

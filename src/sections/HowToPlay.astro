@@ -1,0 +1,81 @@
+---
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+import Container from "../components/Container.astro";
+import RightArrowIcon from "../components/icons/RightArrowIcon.astro";
+---
+
+<section>
+    <Container>
+        <div class="text-center mb-12">
+            <h2 class="h1">
+                <span class="block mb-2">
+                    Incepe Aventura In
+                </span>
+                <span class="block w-fit mx-auto bg-primary px-12 py-6 -skew-x-12">
+                    <span class="block skew-x-12">
+                        3 Pasi Simpli
+                    </span>
+                </span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-3 gap-5">
+            <Card className="bg-top bg-cover p-0 min-h-[65vh]" style="background-image: url(/assets/obtine-copie-gta.png)">
+                <div class="w-full h-full p-4 flex flex-col gap-2 justify-end bg-gradient-to-t from-25% from-dark/75 to-dark/15">
+                    <h3 class="h4">
+                        1. Obtine o Copie Autorizata a 
+                        <span class="text-primary">
+                            Grand Theft Auto 5
+                        </span>
+                    </h3>
+                    <p class="sm *:font-bold *:text-white *:transition-all *:duration-100 hover:*:text-primary">
+                        Acesta poate fi cumparata de pe platforme precum 
+                        <a href="https://store.epicgames.com/en-US/p/grand-theft-auto-v" target="_blank">
+                            Epic Games
+                        </a>
+                        , <a href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/">
+                            Steam
+                        </a>
+                        sau 
+                        <a href="https://socialclub.rockstargames.com/rockstar-games-launcher">
+                            Rockstar Launcher.
+                        </a>
+                    </p>
+                </div>
+            </Card>
+
+            <Card className="bg-top bg-cover p-0 min-h-[65vh]" style="background-image: url(/assets/descarca-fivem.png)">
+                <div class="w-full h-full p-4 flex flex-col gap-2 justify-end bg-gradient-to-t from-25% from-dark/75 to-dark/15">
+                    <h3 class="h4">
+                        2. Descarca si Instaleaza
+                        <span class="text-primary">
+                            Platforma FiveM
+                        </span>
+                    </h3>
+                    <Button variant="plain" size="sm" className="group">
+                        Descarca FiveM
+
+                        <span class="group-hover:ml-1.5 transition-all duration-150">
+                            <RightArrowIcon />
+                        </span>
+                    </Button>
+                </div>
+            </Card>
+
+            <Card className="bg-top bg-cover p-0 min-h-[65vh]" style="background-image: url(/assets/conecteaza-te-pe-server.png)">
+                <div class="w-full h-full p-4 flex flex-col gap-2 justify-end bg-gradient-to-t from-25% from-dark/75 to-dark/15">
+                    <h3 class="h4">
+                        3. Conecteaza-Te Pe
+                        <span class="block text-primary">
+                            Serverul Nostru
+                        </span>
+                    </h3>
+                    <p class="sm *:font-bold">
+                        Lorem ipsum dolor sit amet consectetur. Senectus sit duis ac ut aliquet amet ultricies amet.
+                    </p>
+                </div>
+            </Card>
+        </div>
+    </Container>
+</section>
