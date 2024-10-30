@@ -3,20 +3,26 @@ import { Image } from "astro:assets";
 
 import Container from "../components/Container.astro";
 import Button from "../components/Button.astro";
+import SkewText from "../components/SkewText.astro";
 ---
 
 <section>
-    <Container>
+    <div class="relative block lg:hidden w-full aspect-video overflow-clip">
+        <Image class="absolute -z-10 w-[150%] max-w-none left-1/2 -translate-x-1/2" src="/assets/incepe-aventura.png" alt="Incepe Aventura" width={1920} height={1200}/>
+    </div>
+
+    <Container className="flex flex-col gap-8">
+        <Image class="hidden lg:block w-full" src="/assets/incepe-aventura.png" alt="Incepe Aventura" width={1920} height={1200}/>
         
         <div class="text-center">
-            <h2 class="h1 mb-6">
+            <h2 class="mb-6">
                 <span class="block mb-2">
                     Pregatit Sa Dai Start La
                 </span>
-                <span class="block w-fit mx-auto bg-primary px-12 py-6 -skew-x-12">
-                    <span class="block skew-x-12">
+                <span class="h2">
+                    <SkewText>
                         Noua Ta Viata?
-                    </span>
+                    </SkewText>
                 </span>
             </h2>
             
@@ -24,7 +30,7 @@ import Button from "../components/Button.astro";
                 <Button as="span" variant="white" className="mx-auto">Intra pe Server</Button>
             </a>
         </div>
-        
-        <Image src="/assets/incepe-aventura.png" alt="Incepe Aventura" width={1920} height={1200}/>
+
     </Container>
+    
 </section>

@@ -3,24 +3,23 @@ import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import Container from "../components/Container.astro";
 import RightArrowIcon from "../components/icons/RightArrowIcon.astro";
+import SkewText from "../components/SkewText.astro";
 ---
 
 <section>
     <Container>
         <div class="text-center mb-12">
-            <h2 class="h1">
+            <h2>
                 <span class="block mb-2">
                     Incepe Aventura In
                 </span>
-                <span class="block w-fit mx-auto bg-primary px-12 py-6 -skew-x-12">
-                    <span class="block skew-x-12">
-                        3 Pasi Simpli
-                    </span>
-                </span>
+                <SkewText>
+                    3 Pasi Simpli
+                </SkewText>
             </h2>
         </div>
 
-        <div class="grid grid-cols-3 gap-5">
+        <div class="grid lg:grid-cols-3 gap-5">
             <Card className="bg-top bg-cover p-0 min-h-[448px]" style="background-image: url(/assets/obtine-copie-gta.png)">
                 <h3 class="h4">
                     1. Obtine o Copie Autorizata a 

@@ -8,11 +8,12 @@ import LifeCard from "../components/LifeCard.astro";
 <section>
     <Container>
         <div class="text-center mb-12">
-            <h2 class="h1">Tu Cine Vrei Sa Fii?</h2>
+            <h2>Tu Cine Vrei Sa Fii?</h2>
         </div>
 
-        <div class="grid grid-cols-2 gap-5 pt-24">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-5 pt-8 lg:pt-24">
             <LifeCard
+                href="/forum/clasa-muncitoare"
                 title="Clasa Muncitoare"
                 description="Lorem ipsum dolor sit amet consectetur. Senectus sit duis ac ut aliquet amet ultricies amet."
                 backgroundUrl="/assets/clasa-muncitoare.png"
@@ -24,6 +25,7 @@ import LifeCard from "../components/LifeCard.astro";
             />
 
             <LifeCard
+                href="/forum/mafia-los-santos"
                 title="Mafia Los Santos"
                 description="Lorem ipsum dolor sit amet consectetur. Senectus sit duis ac ut aliquet amet ultricies amet."
                 backgroundUrl="/assets/mafia-los-santos.png"
