@@ -1,4 +1,6 @@
-# Free GTA Landing Page
+# Free GTA Server Landing Page
+
+![GTA Server Landing Page](https://gta-landing-page-fujv5.ondigitalocean.app/assets/incepe-aventura.webp)
 
 A simple landing page with small interactive animations for a fictional GTA Server.
 
@@ -8,7 +10,7 @@ A simple landing page with small interactive animations for a fictional GTA Serv
 
 All assets are available in this project under the `public` folder, categorized by their section.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
