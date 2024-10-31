@@ -19,7 +19,7 @@ const { title, description, backgroundUrl, characterImage, characterPosition = '
 ---
 
 <a href={href} class="flex w-full h-full">
-    <Card noBackground className="relative z-0 !p-0 min-h-[512px] overflow-visible group">
+    <Card noBackground className="relative z-0 !p-0 w-full min-h-[512px] overflow-visible group">
         <Image src={backgroundUrl} alt={title} width={1024} height={1024} class="transition-all duration-200 rounded-md absolute inset-0 -z-20 w-full h-full object-cover lg:grayscale lg:group-hover:grayscale-0" />
         <Image src={characterImage.src} alt="Caracter" width={characterImage.width} height={characterImage.height} class:list={[characterPosition === 'left' ? "left-2" : "right-2","transition-all duration-500 absolute bottom-0 -z-10 h-[calc(100%+16px)] lg:h-[calc(100%+32px)] lg:group-hover:h-[calc(100%+64px)] w-auto"]} />
     
